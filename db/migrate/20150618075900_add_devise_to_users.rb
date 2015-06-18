@@ -2,9 +2,7 @@ class AddDeviseToUsers < ActiveRecord::Migration
   def self.up
     
     create_table :users do |t|
-      
 
-      
     end
     
     
