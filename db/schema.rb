@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618195450) do
+ActiveRecord::Schema.define(version: 20150619185400) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150618195450) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "plan_id"
+    t.string   "stripe_customer_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
