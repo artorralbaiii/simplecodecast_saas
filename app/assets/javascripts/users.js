@@ -6,9 +6,10 @@ $(document).ready(function(){
     $('input[type=submit]').prop('disabled',true);
     var error = false;
     var ccNum = $('#card_number').val(),
-        cvcNum = $('#card_number').val(),
+        cvcNum = $('#card_code').val(),
         expMonth = $('#card_month').val(),
         expYear = $('#card_year').val();
+
     
     if(!error) {
       // Get the strip token
@@ -28,7 +29,6 @@ $(document).ready(function(){
     
     //Get token from the response:
     var token = response.id;
-    
     f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token + '" />');
     
     //Submit the form:
